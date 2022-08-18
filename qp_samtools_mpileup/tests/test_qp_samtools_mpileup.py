@@ -28,8 +28,8 @@ class SamtoolsMpileupTests(PluginTestCase):
         out_dir = mkdtemp()
         self.maxDiff = None
         self.out_dir = out_dir
-        self.dbs = get_ref()
-        self.db_path = QC_REFERENCE
+        self.ref = get_ref()
+        self.ref_path = QC_REFERENCE
         self.params = {'reference': 'covid-ref', 'threads': 2}
         self._clean_up_files = []
         self._clean_up_files.append(out_dir)
