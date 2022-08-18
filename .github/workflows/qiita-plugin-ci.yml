@@ -132,7 +132,7 @@ jobs:
         env:
           COVER_PACKAGE: ${{ matrix.cover_package }}
         run: |
-          conda activate qp-fastp-minimap2
+          conda activate qp-samtools-mpileup
           export QIITA_SERVER_CERT=`pwd`/qiita-dev/qiita_core/support_files/server.crt
           export QIITA_CONFIG_FP=`pwd`/qiita-dev/qiita_core/support_files/config_test_local.cfg
           export QC_REFERENCE=$PWD/qp_samtools_mpileup/support_files/references/
