@@ -12,9 +12,9 @@ import click
 from subprocess import run, PIPE
 from os import environ
 
-from qp_samtools_pileup import plugin
-from qp_samtools_pileup.qp_samtools_pileup import fastp_minimap2_to_array
-from qp_samtools_pileup.utils import client_connect
+from qp_samtools_mpileup import plugin
+from qp_samtools_mpileup.qp_samtools_mpileup import fastp_minimap2_to_array
+from qp_samtools_mpileup.utils import client_connect
 
 
 @click.command()
