@@ -20,7 +20,6 @@ FINISH_MEMORY = '10g'
 FINISH_WALLTIME = '10:00:00'
 MAX_RUNNING = 8
 
-print(environ)
 QC_REFERENCE = environ["QC_REFERENCE"]
 
 SAMTOOLS_CMD = 'samtools mpileup -A -aa -d 0 -Q 0 --reference {reference} %s > {out_dir}/%s'
