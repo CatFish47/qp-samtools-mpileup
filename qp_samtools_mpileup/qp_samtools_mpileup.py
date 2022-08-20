@@ -177,7 +177,7 @@ def samtools_mpileup_to_array(files, out_dir, params, prep_info, url, job_id):
              'date',  # start time
              'hostname',  # executing system
              'echo $PBS_JOBID',
-             f'finish_qp_fastp_minimap2 {url} {job_id} {out_dir}\n'
+             f'finish_qp_samtools_mpileup {url} {job_id} {out_dir}\n'
              "date"]
     finish_qsub_fp = join(out_dir, f'{job_id}.finish.qsub')
     with open(finish_qsub_fp, 'w') as out:

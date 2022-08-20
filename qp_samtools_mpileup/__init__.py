@@ -22,11 +22,11 @@ plugin = QiitaPlugin(**plugin_details)
 ref = get_ref()
 ref_without_extension = splitext(ref)[0]
 # dbs_defaults = ', '.join([f'"{x}"' for x in dbs_without_extension])
-req_params = {'input': ('artifact', ['per_sample_FASTQ'])}
+req_params = {'input': ('artifact', ['BAM'])}
 opt_params = {
     'reference': ['string', f'{ref_without_extension}']}
 
-outputs = {'Filtered files': 'per_sample_FASTQ'}
+outputs = {'Pileup files': 'per_sample_FASTQ'}
 default_params = {
     'default params': {
         'reference': "covid-ref"}}

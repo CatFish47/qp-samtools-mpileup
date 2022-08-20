@@ -13,7 +13,7 @@ from subprocess import run, PIPE
 from os import environ
 
 from qp_samtools_mpileup import plugin
-from qp_samtools_mpileup.qp_samtools_mpileup import fastp_minimap2_to_array
+from qp_samtools_mpileup.qp_samtools_mpileup import samtools_mpileup_to_array
 from qp_samtools_mpileup.utils import client_connect
 
 
@@ -44,7 +44,7 @@ def execute(url, job_id, out_dir):
                                 % artifact_info['prep_information'][0])
         prep_file = prep_info['prep-file']
 
-        main_qsub_fp, finish_qsub_fp, out_files_fp = fastp_minimap2_to_array(
+        main_qsub_fp, finish_qsub_fp, out_files_fp = samtools_mpileup_to_array(
             artifact_info['files'], out_dir, parameters, prep_file,
             url, job_id)
 
